@@ -262,6 +262,27 @@ body {
     display: block;
 }
 
+/* Different sizes for corner overlays */
+.news-image .corner-overlay.top-left {
+    width: 25%;
+    height: 25%;
+}
+
+.news-image .corner-overlay.top-right {
+    width: 30%;
+    height: 30%;
+}
+
+.news-image .corner-overlay.bottom-right {
+    width: 35%;
+    height: 35%;
+}
+
+.news-image .corner-overlay.bottom-left {
+    width: 20%;
+    height: 20%;
+}
+
 .base-image {
     filter: blur(2px);
 }
@@ -293,6 +314,47 @@ body {
     display: block;
     z-index: 1;
     pointer-events: none;
+}
+
+/* Corner overlay images for multiple segmentation effect */
+.corner-overlay {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    vertical-align: top;
+    display: block;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease 0s, transform 0.3s ease; /* No delay - appears first */
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    transition: opacity 0.3s ease 0s, transform 0.3s ease; /* Same delay as top-left */
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    transition: opacity 0.3s ease 0.15s, transform 0.3s ease; /* Appears after top */
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    transition: opacity 0.3s ease 0.15s, transform 0.3s ease; /* Same delay as bottom-right */
 }
 
 .card-category {

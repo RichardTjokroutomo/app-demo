@@ -95,6 +95,25 @@
 
             <div class="news-card">
                 <div class="news-image">
+                    <img src="./images/multiple.jpg" alt="Sports">
+                    <img src="./images/multiple-segmented.png" alt="Sports overlay" class="corner-overlay top-left">
+                    <img src="./images/multiple-segmented.png" alt="Sports overlay" class="corner-overlay top-right">
+                    <img src="./images/multiple-segmented.png" alt="Sports overlay" class="corner-overlay bottom-left">
+                    <img src="./images/multiple-segmented.png" alt="Sports overlay" class="corner-overlay bottom-right">
+                    <span class="card-category">SPORTS</span>
+                </div>
+                <div class="news-content">
+                    <h4 class="news-title">US government to increase debt ceiling</h4>
+                    <p class="news-excerpt">Congress met earlier today to discuss on what to do </p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> 1 day ago</span>
+                        <span><i class="far fa-user"></i> Raj Kumar</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
                     <img src="./images/blur.jpg" alt="Business meeting" class="scroll-blur-image">
                     <span class="card-category">ART & Lifestyle</span>
                 </div>
@@ -123,20 +142,6 @@
                 </div>
             </div>
 
-            <div class="news-card">
-                <div class="news-image">
-                    <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sports">
-                    <span class="card-category">SPORTS</span>
-                </div>
-                <div class="news-content">
-                    <h4 class="news-title">Singapore swimmer wins gold at Asian Games</h4>
-                    <p class="news-excerpt">Teenage sensation breaks regional record in 200m butterfly event.</p>
-                    <div class="news-meta">
-                        <span><i class="far fa-clock"></i> 1 day ago</span>
-                        <span><i class="far fa-user"></i> Raj Kumar</span>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- Footer -->
@@ -215,15 +220,77 @@
             enlargeImage.style.transform = `scale(${Math.max(1, scaleAmount)})`;
         }
 
+        // Scroll-based multiple image animation
+        const cornerOverlays = document.querySelectorAll('.corner-overlay');
+        let multipleBaseImage = null;
+
+        // Find the base image in the same container as the corner overlays
+        if (cornerOverlays.length > 0) {
+            const container = cornerOverlays[0].closest('.news-image');
+            if (container) {
+                // Find the first image that is not a corner overlay
+                multipleBaseImage = container.querySelector('img:not(.corner-overlay)');
+            }
+        }
+
+        function updateMultipleBasedOnScroll() {
+            if (!multipleBaseImage || cornerOverlays.length === 0) return;
+
+            const rect = multipleBaseImage.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const imageCenterY = rect.top + rect.height / 2;
+            const viewportCenterY = windowHeight / 2;
+
+            // Calculate distance from center (normalized to 0-1)
+            const distanceFromCenter = Math.abs(imageCenterY - viewportCenterY) / (windowHeight / 2);
+
+            // When image is near center (within 40% of viewport height from center), show overlays
+            // Otherwise, hide them (fade away)
+            const showThreshold = 0.4; // 40% from center
+
+            // Calculate opacity for each corner with different thresholds for sequential appearance
+            // Sequence: top (both) -> bottom (both)
+            // Top appears when within 40% of center, bottom appears when within 20% of center
+            cornerOverlays.forEach(overlay => {
+                let opacity = 0;
+                let targetAngle = 0;
+
+                if (overlay.classList.contains('top-left')) {
+                    // Top-left appears with top group
+                    opacity = Math.max(0, 1 - (distanceFromCenter / showThreshold));
+                    targetAngle = 5; // +5 degrees
+                } else if (overlay.classList.contains('top-right')) {
+                    // Top-right appears with top group
+                    opacity = Math.max(0, 1 - (distanceFromCenter / showThreshold));
+                    targetAngle = -5; // -5 degrees
+                } else if (overlay.classList.contains('bottom-right')) {
+                    // Bottom-right appears with bottom group
+                    const bottomThreshold = showThreshold * 0.5; // 0.4 * 0.5 = 0.2
+                    opacity = Math.max(0, 1 - (distanceFromCenter / bottomThreshold));
+                    targetAngle = 3; // +3 degrees
+                } else if (overlay.classList.contains('bottom-left')) {
+                    // Bottom-left appears with bottom group
+                    const bottomThreshold = showThreshold * 0.5; // 0.4 * 0.5 = 0.2
+                    opacity = Math.max(0, 1 - (distanceFromCenter / bottomThreshold));
+                    targetAngle = -3; // -3 degrees
+                }
+
+                overlay.style.opacity = opacity;
+                overlay.style.transform = `rotate(${targetAngle * opacity}deg)`;
+            });
+        }
+
         // Combined update function
         function updateAllScrollAnimations() {
             updateBlurBasedOnScroll();
             updateEnlargeBasedOnScroll();
+            updateMultipleBasedOnScroll();
         }
 
         // Initial checks
         updateBlurBasedOnScroll();
         updateEnlargeBasedOnScroll();
+        updateMultipleBasedOnScroll();
 
         // Listen to scroll events (with debouncing for performance)
         let scrollTimeout;
