@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0a2463">
+    <title>Daily News | CNA Style</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with logo and nav -->
+        <header class="header">
+            <div class="header-top">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="logo">
+                    <h1>DAILY NEWS</h1>
+                    <p class="current-date" id="current-date">Wednesday, 2 April 2026</p>
+                </div>
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link active">Top Stories</a>
+                <a href="#" class="nav-link">Singapore</a>
+                <a href="#" class="nav-link">Asia</a>
+                <a href="#" class="nav-link">World</a>
+                <a href="#" class="nav-link">Business</a>
+                <a href="#" class="nav-link">Tech</a>
+            </nav>
+        </header>
+
+        <!-- Breaking News Banner -->
+        <section class="breaking-news">
+            <div class="breaking-label">
+                <span class="breaking-badge">BREAKING</span>
+                <span class="breaking-text">Singapore economy grows 3.2% in Q1, exceeds forecasts</span>
+            </div>
+        </section>
+
+        <!-- Main Featured Story -->
+        <section class="featured-story">
+            <div class="featured-image">
+                <img src="https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Singapore skyline">
+                <div class="featured-overlay">
+                    <span class="category-badge">SINGAPORE</span>
+                    <h2 class="featured-title">New housing measures announced to cool property market</h2>
+                    <p class="featured-excerpt">Additional buyer's stamp duty raised for second and subsequent properties, effective immediately.</p>
+                    <div class="featured-meta">
+                        <span><i class="far fa-clock"></i> 2 hours ago</span>
+                        <span><i class="far fa-comment"></i> 42 comments</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Recommendations -->
+        <section class="recommendations">
+            <h3 class="section-title">Recommended For You</h3>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="./images/enlarge.jpg" alt="Tech conference" class="base-image">
+                    <img src="./images/enlarge-segmented.png" alt="Tech conference overlay" class="overlay-image animated-enlarge">
+                    <span class="card-category">TECH</span>
+                </div>
+                <div class="news-content">
+                    <h4 class="news-title">Why is OpenClaw so popular in China?</h4>
+                    <p class="news-excerpt">China has taken to OpenClaw in a way no other country has. People queue outside Baidu and Tencent offices to get the tool installed on their laptops. </p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> 4 hours ago</span>
+                        <span><i class="far fa-user"></i> Sarah Tan</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="./images/rotate.jpg" alt="Weather storm" class="base-image">
+                    <img src="./images/rotate-segmented.png" alt="Weather storm overlay" class="overlay-image animated-rotate">
+                    <span class="card-category">ASIA</span>
+                </div>
+                <div class="news-content">
+                    <h4 class="news-title">Ranked: Here are the top retailers in Asia</h4>
+                    <p class="news-excerpt">Japanese convenience stores lead the ranking, with Chinese e-commerce giants showing explosive growth in the past year.</p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> 6 hours ago</span>
+                        <span><i class="far fa-user"></i> Miguel Santos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="./images/blur.jpg" alt="Business meeting" class="scroll-blur-image">
+                    <span class="card-category">ART & Lifestyle</span>
+                </div>
+                <div class="news-content">
+                    <h4 class="news-title">Chinese painting sold for 20M RMB at an auction</h4>
+                    <p class="news-excerpt">A rare Ming Dynasty landscape painting fetched record price at Sotheby's Hong Kong, highlighting growing interest in classical Asian art.</p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> 8 hours ago</span>
+                        <span><i class="far fa-user"></i> James Lee</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="./images/whole-enlarge.jpg" alt="Healthcare" class="scroll-enlarge-image">
+                    <span class="card-category">OPINION</span>
+                </div>
+                <div class="news-content">
+                    <h4 class="news-title">Opinion: How AI is shaping the future of office surveillance</h4>
+                    <p class="news-excerpt">Facial recognition and productivity tracking algorithms raise ethical questions about workplace privacy and employee autonomy.</p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> 1 day ago</span>
+                        <span><i class="far fa-user"></i> Dr. Chen Wei</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sports">
+                    <span class="card-category">SPORTS</span>
+                </div>
+                <div class="news-content">
+                    <h4 class="news-title">Singapore swimmer wins gold at Asian Games</h4>
+                    <p class="news-excerpt">Teenage sensation breaks regional record in 200m butterfly event.</p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> 1 day ago</span>
+                        <span><i class="far fa-user"></i> Raj Kumar</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-nav">
+                <a href="#"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-compass"></i> Discover</a>
+                <a href="#"><i class="fas fa-bookmark"></i> Saved</a>
+                <a href="#"><i class="fas fa-user"></i> Profile</a>
+            </div>
+            <p class="copyright">© <span id="copyright-year">2026</span> Daily News.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Set current date and year
+        const dateElement = document.getElementById('current-date');
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = now.toLocaleDateString('en-SG', options);
+        document.getElementById('copyright-year').textContent = now.getFullYear();
+
+        // Simple interactivity
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('click', () => {
+                alert('Opening full article...');
+            });
+        });
+
+        document.querySelector('.menu-btn').addEventListener('click', () => {
+            alert('Menu opened');
+        });
+
+        document.querySelector('.search-btn').addEventListener('click', () => {
+            alert('Search opened');
+        });
+
+        // Scroll-based blur animation
+        const blurImage = document.querySelector('.scroll-blur-image');
+
+        function updateBlurBasedOnScroll() {
+            if (!blurImage) return;
+
+            const rect = blurImage.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const imageCenterY = rect.top + rect.height / 2;
+            const viewportCenterY = windowHeight / 2;
+
+            // Calculate distance from center (normalized to 0-1)
+            const distanceFromCenter = Math.abs(imageCenterY - viewportCenterY) / (windowHeight / 2);
+
+            // When image is near center (within 30% of viewport height from center), deblur
+            // Otherwise, blur more as it moves away
+            const blurAmount = Math.min(5, distanceFromCenter * 8); // Max blur 5px
+            blurImage.style.filter = `blur(${blurAmount}px)`;
+
+        }
+
+        // Scroll-based enlargement animation
+        const enlargeImage = document.querySelector('.scroll-enlarge-image');
+
+        function updateEnlargeBasedOnScroll() {
+            if (!enlargeImage) return;
+
+            const rect = enlargeImage.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const imageCenterY = rect.top + rect.height / 2;
+            const viewportCenterY = windowHeight / 2;
+
+            // Calculate distance from center (normalized to 0-1)
+            const distanceFromCenter = Math.abs(imageCenterY - viewportCenterY) / (windowHeight / 2);
+
+            // Scale from 1.1 (center) to 1 (far away)
+            // Use ease-out curve: scale decreases more quickly as distance increases
+            const scaleAmount = 1.1 - (distanceFromCenter * 0.1);
+            enlargeImage.style.transform = `scale(${Math.max(1, scaleAmount)})`;
+        }
+
+        // Combined update function
+        function updateAllScrollAnimations() {
+            updateBlurBasedOnScroll();
+            updateEnlargeBasedOnScroll();
+        }
+
+        // Initial checks
+        updateBlurBasedOnScroll();
+        updateEnlargeBasedOnScroll();
+
+        // Listen to scroll events (with debouncing for performance)
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(updateAllScrollAnimations, 20);
+        });
+
+        // Also update on resize (viewport height changes)
+        window.addEventListener('resize', updateAllScrollAnimations);
+    </script>
+</body>
+</html>
