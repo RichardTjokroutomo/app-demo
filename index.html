@@ -79,6 +79,21 @@
 
             <div class="news-card">
                 <div class="news-image">
+                    <img src="./images/polar-bear.gif" alt="Bear">
+                    <span class="card-category">ENVIRONMENT</span>
+                </div>
+                <div class="news-content">
+                    <h4 class="news-title">Record heat expected in summer 2026 amid global warming</h4>
+                    <p class="news-excerpt">In an official statement made this morning, the national meteorological bureau warned that..</p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> 1 day ago</span>
+                        <span><i class="far fa-user"></i> Raj Kumar</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
                     <img src="./images/rotate.jpg" alt="Weather storm" class="base-image">
                     <img src="./images/rotate-segmented.png" alt="Weather storm overlay" class="overlay-image animated-rotate">
                     <span class="card-category">ASIA</span>
@@ -95,26 +110,7 @@
 
             <div class="news-card">
                 <div class="news-image">
-                    <img src="./images/multiple.jpg" alt="Sports">
-                    <img src="./images/multiple-segmented.png" alt="Sports overlay" class="corner-overlay top-left">
-                    <img src="./images/multiple-segmented.png" alt="Sports overlay" class="corner-overlay top-right">
-                    <img src="./images/multiple-segmented.png" alt="Sports overlay" class="corner-overlay bottom-left">
-                    <img src="./images/multiple-segmented.png" alt="Sports overlay" class="corner-overlay bottom-right">
-                    <span class="card-category">SPORTS</span>
-                </div>
-                <div class="news-content">
-                    <h4 class="news-title">US government to increase debt ceiling</h4>
-                    <p class="news-excerpt">Congress met earlier today to discuss on what to do </p>
-                    <div class="news-meta">
-                        <span><i class="far fa-clock"></i> 1 day ago</span>
-                        <span><i class="far fa-user"></i> Raj Kumar</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news-card">
-                <div class="news-image">
-                    <img src="./images/blur.jpg" alt="Business meeting" class="scroll-blur-image">
+                    <img src="./images/bird.gif" alt="Chinese painting">
                     <span class="card-category">ART & Lifestyle</span>
                 </div>
                 <div class="news-content">
@@ -129,7 +125,56 @@
 
             <div class="news-card">
                 <div class="news-image">
-                    <img src="./images/whole-enlarge.jpg" alt="Healthcare" class="scroll-enlarge-image">
+                    <img src="./images/sea.gif" alt="sea" class="scroll-enlarge-image">
+                    <span class="card-category">TRAVEL</span>
+                </div>
+                <div class="news-content">
+                    <h4 class="news-title">Top 10 must visit travel destination in 2026</h4>
+                    <p class="news-excerpt"></p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> 1 day ago</span>
+                        <span><i class="far fa-user"></i> Dr. Chen Wei</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="./images/multiple.jpg" alt="dollar">
+                    <img src="./images/multiple-segmented.png" alt="Sports overlay" class="corner-overlay top-left">
+                    <img src="./images/multiple-segmented.png" alt="Sports overlay" class="corner-overlay top-right">
+                    <img src="./images/multiple-segmented.png" alt="Sports overlay" class="corner-overlay bottom-left">
+                    <img src="./images/multiple-segmented.png" alt="Sports overlay" class="corner-overlay bottom-right">
+                    <span class="card-category">POLITICS</span>
+                </div>
+                <div class="news-content">
+                    <h4 class="news-title">US government to increase debt ceiling</h4>
+                    <p class="news-excerpt">Congress met earlier today to discuss on what to do </p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> 1 day ago</span>
+                        <span><i class="far fa-user"></i> Raj Kumar</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="./images/golfer.gif" alt="golf" class="scroll-enlarge-image">
+                    <span class="card-category">SPORTS</span>
+                </div>
+                <div class="news-content">
+                    <h4 class="news-title">World Golfing Championship update</h4>
+                    <p class="news-excerpt"></p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> 1 day ago</span>
+                        <span><i class="far fa-user"></i>Ashley Tan</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="./images/whole-enlarge.jpg" alt="robot" class="scroll-enlarge-image scroll-enlarge-whole">
                     <span class="card-category">OPINION</span>
                 </div>
                 <div class="news-content">
@@ -138,6 +183,21 @@
                     <div class="news-meta">
                         <span><i class="far fa-clock"></i> 1 day ago</span>
                         <span><i class="far fa-user"></i> Dr. Chen Wei</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="./images/mona-lisa.gif" alt="mona" class="scroll-enlarge-image">
+                    <span class="card-category">CRIME</span>
+                </div>
+                <div class="news-content">
+                    <h4 class="news-title">Climate activists attempted to vandalize Mona Lisa</h4>
+                    <p class="news-excerpt">A group of climate activists called Just Stop Oil</p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> 1 day ago</span>
+                        <span><i class="far fa-user"></i>Raj Gupta</span>
                     </div>
                 </div>
             </div>
@@ -220,6 +280,25 @@
             enlargeImage.style.transform = `scale(${Math.max(1, scaleAmount)})`;
         }
 
+        // Scroll-based whole image enlargement animation (1.3x at center)
+        const wholeEnlargeImage = document.querySelector('.scroll-enlarge-whole');
+
+        function updateWholeEnlargeBasedOnScroll() {
+            if (!wholeEnlargeImage) return;
+
+            const rect = wholeEnlargeImage.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const imageCenterY = rect.top + rect.height / 2;
+            const viewportCenterY = windowHeight / 2;
+
+            // Calculate distance from center (normalized to 0-1)
+            const distanceFromCenter = Math.abs(imageCenterY - viewportCenterY) / (windowHeight / 2);
+
+            // Scale from 1.3 (center) to 1 (far away)
+            const scaleAmount = 1.3 - (distanceFromCenter * 0.3);
+            wholeEnlargeImage.style.transform = `scale(${Math.max(1, scaleAmount)})`;
+        }
+
         // Scroll-based multiple image animation
         const cornerOverlays = document.querySelectorAll('.corner-overlay');
         let multipleBaseImage = null;
@@ -244,35 +323,38 @@
             // Calculate distance from center (normalized to 0-1)
             const distanceFromCenter = Math.abs(imageCenterY - viewportCenterY) / (windowHeight / 2);
 
-            // When image is near center (within 40% of viewport height from center), show overlays
+            // When image is near center (within 80% of viewport height from center), show overlays
             // Otherwise, hide them (fade away)
-            const showThreshold = 0.4; // 40% from center
+            const showThreshold = 0.8; // 80% from center
 
             // Calculate opacity for each corner with different thresholds for sequential appearance
             // Sequence: top (both) -> bottom (both)
-            // Top appears when within 40% of center, bottom appears when within 20% of center
+            // Top appears when within 80% of center, bottom appears when within 72% of center
+            const deadZone = 0.2; // 20% from center where opacity stays 1
+
             cornerOverlays.forEach(overlay => {
                 let opacity = 0;
                 let targetAngle = 0;
+                let threshold = showThreshold;
 
-                if (overlay.classList.contains('top-left')) {
-                    // Top-left appears with top group
-                    opacity = Math.max(0, 1 - (distanceFromCenter / showThreshold));
-                    targetAngle = 5; // +5 degrees
-                } else if (overlay.classList.contains('top-right')) {
-                    // Top-right appears with top group
-                    opacity = Math.max(0, 1 - (distanceFromCenter / showThreshold));
-                    targetAngle = -5; // -5 degrees
-                } else if (overlay.classList.contains('bottom-right')) {
-                    // Bottom-right appears with bottom group
-                    const bottomThreshold = showThreshold * 0.5; // 0.4 * 0.5 = 0.2
-                    opacity = Math.max(0, 1 - (distanceFromCenter / bottomThreshold));
-                    targetAngle = 3; // +3 degrees
-                } else if (overlay.classList.contains('bottom-left')) {
-                    // Bottom-left appears with bottom group
-                    const bottomThreshold = showThreshold * 0.5; // 0.4 * 0.5 = 0.2
-                    opacity = Math.max(0, 1 - (distanceFromCenter / bottomThreshold));
-                    targetAngle = -3; // -3 degrees
+                if (overlay.classList.contains('top-left') || overlay.classList.contains('top-right')) {
+                    threshold = showThreshold;
+                    targetAngle = overlay.classList.contains('top-left') ? 5 : -5;
+                } else if (overlay.classList.contains('bottom-right') || overlay.classList.contains('bottom-left')) {
+                    threshold = showThreshold * 0.9; // 0.8 * 0.9 = 0.72
+                    targetAngle = overlay.classList.contains('bottom-right') ? 3 : -3;
+                }
+
+                // Calculate opacity with dead zone
+                if (distanceFromCenter <= deadZone) {
+                    opacity = 1;
+                } else if (distanceFromCenter <= threshold) {
+                    // Linear fade from deadZone to threshold
+                    const effectiveDistance = distanceFromCenter - deadZone;
+                    const effectiveRange = threshold - deadZone;
+                    opacity = 1 - (effectiveDistance / effectiveRange);
+                } else {
+                    opacity = 0;
                 }
 
                 overlay.style.opacity = opacity;
@@ -284,12 +366,14 @@
         function updateAllScrollAnimations() {
             updateBlurBasedOnScroll();
             updateEnlargeBasedOnScroll();
+            updateWholeEnlargeBasedOnScroll();
             updateMultipleBasedOnScroll();
         }
 
         // Initial checks
         updateBlurBasedOnScroll();
         updateEnlargeBasedOnScroll();
+        updateWholeEnlargeBasedOnScroll();
         updateMultipleBasedOnScroll();
 
         // Listen to scroll events (with debouncing for performance)
